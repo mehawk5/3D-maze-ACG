@@ -9,4 +9,4 @@ Go to scenes -> Sample scene to test the project
 Use the Movement keys (WASD) to walk and the mouse to look around
 <br/>
 <br/>
-Use this URL to play the project on itch.io <link href="https://mehawk512.itch.io/3d-maze-acg?secret=OSvKhL0OXs1lwto9D2ii0YrBio">
+Use this URL to play the project on itch.io <a href="[url](https://mehawk512.itch.io/3d-maze-acg?secret=OSvKhL0OXs1lwto9D2ii0YrBio)https://mehawk512.itch.io/3d-maze-acg?secret=OSvKhL0OXs1lwto9D2ii0YrBio">https://mehawk512.itch.io/3d-maze-acg?secret=OSvKhL0OXs1lwto9D2ii0YrBio</a>
