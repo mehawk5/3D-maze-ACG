@@ -39,6 +39,7 @@ public class MazeRenderer : MonoBehaviour
                     var topWall = Instantiate(wallPrefab, transform) as Transform;
                     topWall.position = position + new Vector3(0, 0, size/2);
                     topWall.localScale = new Vector3(size, topWall.localScale.y, topWall.localScale.z);
+                    SetBeginingAndEndColors(topWall, i, j);
                 }
 
                 if (cell.HasFlag(WallState.LEFT))
@@ -47,6 +48,7 @@ public class MazeRenderer : MonoBehaviour
                     leftWall.position = position + new Vector3(-size/2, 0, 0);
                     leftWall.localScale = new Vector3(size, leftWall.localScale.y, leftWall.localScale.z);
                     leftWall.eulerAngles = new Vector3(0, 90, 0);
+                    SetBeginingAndEndColors(leftWall, i, j);
                 }
 
                 if(i == width - 1)
@@ -57,6 +59,7 @@ public class MazeRenderer : MonoBehaviour
                         rightWall.position = position + new Vector3(+size / 2, 0, 0);
                         rightWall.localScale = new Vector3(size, rightWall.localScale.y, rightWall.localScale.z);
                         rightWall.eulerAngles = new Vector3(0, 90, 0);
+                        SetBeginingAndEndColors(rightWall, i, j);
                     }
                 }
 
@@ -67,15 +70,22 @@ public class MazeRenderer : MonoBehaviour
                         var bottomWall = Instantiate(wallPrefab, transform) as Transform;
                         bottomWall.position = position + new Vector3(0, 0, -size / 2);
                         bottomWall.localScale = new Vector3(size, bottomWall.localScale.y, bottomWall.localScale.z);
+                        SetBeginingAndEndColors(bottomWall, i, j);
                     }
                 }
             }
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void SetBeginingAndEndColors(Transform wall, int i, int j)
     {
-        
+        if(i == 0 && j == 0)
+        {
+            wall.GetComponent<Renderer>().material.color = Color.green;
+        }
+        if (i == width - 1 && j == height - 1)
+        {
+            wall.GetComponent<Renderer>().material.color = Color.red;
+        }
     }
 }
